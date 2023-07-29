@@ -1,0 +1,13 @@
+.mycontainer div {
+    margin: 0px 10px 0px 0px;
+}
+
+.login_fix_ {
+    background: lightgray;
+    border: white;
+    padding-top: 162px;
+    font-style: italic;
+    color: aliceblue;
+    width: 500px;
+    height: 500px;
+}
