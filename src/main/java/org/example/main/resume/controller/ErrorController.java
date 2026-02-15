@@ -6,7 +6,6 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.example.dao.inter.UserDaoInter;
-import org.example.entity.User;
 
 import java.io.IOException;
 import org.example.main.Context;

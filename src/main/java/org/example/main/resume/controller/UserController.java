@@ -7,10 +7,8 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import org.example.dao.inter.UserDaoInter;
 import org.example.entity.User;
-
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import org.example.main.Context;
 
@@ -25,7 +23,6 @@ public class UserController extends HttpServlet {
         String surname = request.getParameter("surname");
         List<User> us = new ArrayList<>();
         List<User> list = userDao.getAll();
-        System.out.println(list.toString());
         if ((name == null || name.isEmpty()) && (surname == null || surname.isEmpty())) {
             us = list;
         } else {
@@ -36,6 +33,6 @@ public class UserController extends HttpServlet {
             }
         }
         request.setAttribute("foundUsers", us);
-        request.getRequestDispatcher("users.jsp").forward(request, response);
+        request.getRequestDispatcher("/users.jsp").forward(request, response);
     }
 }
