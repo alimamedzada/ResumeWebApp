@@ -10,6 +10,7 @@ import org.example.entity.User;
 
 import java.io.IOException;
 import org.example.main.Context;
+import org.example.main.resume.util.ControllerUtil;
 
 @WebServlet(name = "UserDetailController", urlPatterns = {"/userdetail"})
 public class UserDetailController extends HttpServlet {
@@ -61,8 +62,7 @@ public class UserDetailController extends HttpServlet {
             request.getRequestDispatcher("userdetails.jsp").forward(request, response);
 
         } catch (Exception ex) {
-            ex.printStackTrace();
-            response.sendRedirect("error?msg=" + ex.getMessage());
+            ControllerUtil.errorPage(response, ex);
         }
     }
 }

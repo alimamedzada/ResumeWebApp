@@ -27,7 +27,7 @@ public class UserController extends HttpServlet {
             us = list;
         } else {
             for (User users : list) {
-                if (users.getName().equals(name) && users.getSurname().equals(surname)) {
+                if (users.getName().equalsIgnoreCase(name) && users.getSurname().equalsIgnoreCase(surname)) {
                     us.add(users);
                 }
             }
